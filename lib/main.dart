@@ -52,7 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(
           widget.title,
-          style: TextStyle(fontSize: 16),
         ),
       ),
       body: FutureBuilder<List<Data>>(
