@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gdg_goa/second_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,40 +30,31 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: TextStyle(fontSize: 16),
+        ),
       ),
-      //TODO change it with ListView.builder()
       body: ListView.builder(
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(index.toString()),
+            onTap: () {
+              //Use to navigate to new screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SecondScreen(
+                      index.toString(),
+                    );
+                  },
+                ),
+              );
+            },
           );
         },
       ),
     );
   }
 }
-
-///ListView Builder solution with Text()
-/*
-
-ListView.builder(
-        itemBuilder: (context, index) {
-          return Text(index.toString());
-        },
-      )
-
-*/
-
-///ListView Builder solution with ListTile()
-/*
-
-ListView.builder(
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(index.toString()),
-          );
-        },
-      )
-
- */
