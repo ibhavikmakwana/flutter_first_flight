@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SecondScreen extends StatelessWidget {
-  final String index;
+  final String data;
 
-  SecondScreen(this.index);
+  SecondScreen(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +13,9 @@ class SecondScreen extends StatelessWidget {
       ),
       body: Center(
         child: Container(
+          margin: EdgeInsets.all(16),
           child: Text(
-            index,
+            data,
             style: TextStyle(fontSize: 16),
           ),
         ),
