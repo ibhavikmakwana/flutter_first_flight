@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Infinite ListView'),
+      home: MyHomePage(title: 'Navigation'),
     );
   }
 }
